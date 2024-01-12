@@ -29,9 +29,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{D10E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{CA42B783-1949-4926-B018-7D59CBD779F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Services.Catalog", "ECommerce.Services.Catalog\ECommerce.Services.Catalog.csproj", "{FFCABC78-2E7A-4C36-BDDB-506C92B78B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Services.Catalog", "ECommerce.Services.Catalog\ECommerce.Services.Catalog.csproj", "{FFCABC78-2E7A-4C36-BDDB-506C92B78B77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Shared", "ECommerce.Shared\ECommerce.Shared.csproj", "{FAF9F78D-3364-419A-856C-4F19FB98D479}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Shared", "ECommerce.Shared\ECommerce.Shared.csproj", "{FAF9F78D-3364-419A-856C-4F19FB98D479}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1FA0113-D08D-4679-BC97-5490858EE518}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
