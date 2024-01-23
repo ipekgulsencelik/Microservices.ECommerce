@@ -2,13 +2,13 @@
 
 namespace ECommerce.Services.Order.Application.Interfaces
 {
-    public interface IRepository<T> where T : class
+	public interface IRepository<T> where T : class
     {
-        Task<List<T>> GetAllAsync();
+		Task<List<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
-        Task<T> CreateAsync(T entity);
-        Task<T> UpdateAsync(T entity);
-        Task<T> DeleteAsync(int id);
-        Task<List<T>> GetFilteredList(Expression<Func<T, bool>> filter);
-    }
+		Task CreateAsync(T entity);
+		Task UpdateAsync(T entity);
+		Task DeleteAsync(T entity);
+		Task<T> GetOrdersByFilter(Expression<Func<T, bool>> filter);
+	}
 }
