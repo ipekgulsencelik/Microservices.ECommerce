@@ -18,6 +18,7 @@ namespace ECommerce.Services.Order.Application.Features.Mediator.Handlers.Orderi
 		public async Task<GetOrderingByIdQueryResult> Handle(GetOrderingByIdQuery request, CancellationToken cancellationToken)
 		{
 			var values = await _repository.GetByIdAsync(request.Id);
+
 			return new GetOrderingByIdQueryResult
 			{
 				OrderDate = values.OrderDate,
