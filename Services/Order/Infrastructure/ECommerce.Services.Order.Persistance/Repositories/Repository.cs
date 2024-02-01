@@ -20,12 +20,13 @@ namespace ECommerce.Services.Order.Persistance.Repositories
 			await _context.SaveChangesAsync();
 		}
 
-		public async Task DeleteAsync(T entity)
+		public async Task DeleteAsync(int id)
 		{
-			_context.Set<T>().Remove(entity);
+			var value = await _context.Set<T>().FindAsync(id);
+			_context.Remove(value);
 			await _context.SaveChangesAsync();
 		}
-		
+
 		public async Task<List<T>> GetAllAsync()
 		{
 			return await _context.Set<T>().ToListAsync();

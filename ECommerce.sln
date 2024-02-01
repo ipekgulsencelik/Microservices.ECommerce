@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{41
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{A462D558-7B17-4DCC-AF85-4D08E012C1DD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{D745968C-846F-4A49-8ED1-E5F61FA08161}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{D745968C-846F-4A49-8ED1-E5F61FA08161}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{2D4C125D-C047-4A5C-9DF4-7FACD99DF56C}"
 EndProject
@@ -44,15 +44,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BA83D983-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{943E945F-10F1-4695-884F-9520AEBB0AC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Services.Order.Application", "Services\Order\Core\ECommerce.Services.Order.Application\ECommerce.Services.Order.Application.csproj", "{05BE0C58-207A-416C-8B46-2D7DB2AFA24D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Services.Order.Application", "Services\Order\Core\ECommerce.Services.Order.Application\ECommerce.Services.Order.Application.csproj", "{05BE0C58-207A-416C-8B46-2D7DB2AFA24D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Services.Order.Persistance", "Services\Order\Infrastructure\ECommerce.Services.Order.Persistance\ECommerce.Services.Order.Persistance.csproj", "{33B8FE8A-5300-4A97-815B-D3D081DBE920}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Services.Order.Persistance", "Services\Order\Infrastructure\ECommerce.Services.Order.Persistance\ECommerce.Services.Order.Persistance.csproj", "{33B8FE8A-5300-4A97-815B-D3D081DBE920}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Services.Order.Domain", "Services\Order\Core\ECommerce.Services.Order.Domain\ECommerce.Services.Order.Domain.csproj", "{738306EC-2AE2-4D27-B464-728E1411B4B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Services.Order.Domain", "Services\Order\Core\ECommerce.Services.Order.Domain\ECommerce.Services.Order.Domain.csproj", "{738306EC-2AE2-4D27-B464-728E1411B4B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{305A7389-A209-4C96-ADE1-C2BB51D2E128}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Services.Order.WebAPI", "Services\Order\Presentation\ECommerce.Services.Order.WebAPI\ECommerce.Services.Order.WebAPI.csproj", "{5788C599-D0FF-4E4D-801C-9665C812903F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Services.Order.WebAPI", "Services\Order\Presentation\ECommerce.Services.Order.WebAPI\ECommerce.Services.Order.WebAPI.csproj", "{5788C599-D0FF-4E4D-801C-9665C812903F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.IdentityServer", "IdentityServer\ECommerce.IdentityServer\ECommerce.IdentityServer.csproj", "{50DF09A8-D270-4B49-B3A1-F094FFF32CEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,6 +90,10 @@ Global
 		{5788C599-D0FF-4E4D-801C-9665C812903F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5788C599-D0FF-4E4D-801C-9665C812903F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5788C599-D0FF-4E4D-801C-9665C812903F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50DF09A8-D270-4B49-B3A1-F094FFF32CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DF09A8-D270-4B49-B3A1-F094FFF32CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DF09A8-D270-4B49-B3A1-F094FFF32CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DF09A8-D270-4B49-B3A1-F094FFF32CEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +117,7 @@ Global
 		{738306EC-2AE2-4D27-B464-728E1411B4B9} = {BA83D983-38C9-4773-9FC7-EE95DB54B595}
 		{305A7389-A209-4C96-ADE1-C2BB51D2E128} = {5B4C221B-1FF4-4FF1-9788-9928D06D222F}
 		{5788C599-D0FF-4E4D-801C-9665C812903F} = {305A7389-A209-4C96-ADE1-C2BB51D2E128}
+		{50DF09A8-D270-4B49-B3A1-F094FFF32CEF} = {D745968C-846F-4A49-8ED1-E5F61FA08161}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3DC5E6A-345F-4F1E-AD56-80565E3D3310}

@@ -8,7 +8,7 @@ namespace ECommerce.Services.Order.Application.Interfaces
         Task<T> GetByIdAsync(int id);
 		Task CreateAsync(T entity);
 		Task UpdateAsync(T entity);
-		Task DeleteAsync(T entity);
+		Task DeleteAsync(int id);
 		Task<T> GetOrdersByFilter(Expression<Func<T, bool>> filter);
 	}
 }

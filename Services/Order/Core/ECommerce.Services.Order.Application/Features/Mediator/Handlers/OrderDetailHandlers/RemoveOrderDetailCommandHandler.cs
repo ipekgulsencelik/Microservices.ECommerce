@@ -1,4 +1,5 @@
-﻿using ECommerce.Services.Order.Application.Features.Mediator.Commands.OrderDetailCommands;
+﻿using AutoMapper;
+using ECommerce.Services.Order.Application.Features.Mediator.Commands.OrderDetailCommands;
 using ECommerce.Services.Order.Application.Interfaces;
 using ECommerce.Services.Order.Domain.Entities;
 using MediatR;
@@ -8,17 +9,17 @@ namespace ECommerce.Services.Order.Application.Features.Mediator.Handlers.OrderD
 	internal class RemoveOrderDetailCommandHandler : IRequestHandler<RemoveOrderDetailCommand>
 	{
 		private readonly IRepository<OrderDetail> _repository;
+		private readonly IMapper _mapper;
 
-		public RemoveOrderDetailCommandHandler(IRepository<OrderDetail> repository)
+		public RemoveOrderDetailCommandHandler(IRepository<OrderDetail> repository, IMapper mapper)
 		{
 			_repository = repository;
+			_mapper = mapper;
 		}
 
 		public async Task Handle(RemoveOrderDetailCommand request, CancellationToken cancellationToken)
 		{
-			var value = await _repository.GetByIdAsync(request.Id);
-
-			await _repository.DeleteAsync(value);
+			await _repository.DeleteAsync(request.Id);
 		}
 	}
 }
