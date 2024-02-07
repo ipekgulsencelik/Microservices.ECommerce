@@ -18,6 +18,7 @@ namespace ECommerce.IdentityServer
             new ApiResource("ResourceDiscountFull"){Scopes={"DiscountFullPermission" } },
             new ApiResource("ResourceOrderEdit"){Scopes={"OrderEditPermission" } },
             new ApiResource("ResourceOrderFull"){Scopes={"OrderFullPermission" } },
+            new ApiResource("ResourceBasketFull") { Scopes = { "BasketFullPermission" } },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
        };
 
@@ -37,6 +38,7 @@ namespace ECommerce.IdentityServer
             new ApiScope("DiscountFullPermission","Full Authority for Discount Operations"),
             new ApiScope("OrderEditPermission","Order Edit Authority for Order Operations"),
             new ApiScope("OrderFullPermission","Order Full Authority for Order Operations"),
+            new ApiScope("BasketFullPermission","Basket Full Authority For Basket Full Operations "),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -67,9 +69,10 @@ namespace ECommerce.IdentityServer
             {
                 ClientId="ECommerceAdminID",
                 ClientName="ECommerce Admin User",
-                AllowedGrantTypes=GrantTypes.ClientCredentials,
+                 AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
                 ClientSecrets={new Secret("ecommercesecret".Sha256())},
-                AllowedScopes={ "CatalogFullPermission", "DiscountFullPermission", "OrderFullPermission", IdentityServerConstants.LocalApi.ScopeName }, AccessTokenLifetime=600
+                AllowedScopes = { "CatalogReadPermission", "CatalogFullPermission", "DiscountReadPermission", "DiscountCreatePermission", "DiscountFullPermission", "OrderEditPermission", "OrderFullPermission", "BasketFullPermission", IdentityServerConstants.LocalApi.ScopeName },
+                AccessTokenLifetime = 600
             }
         };
     }

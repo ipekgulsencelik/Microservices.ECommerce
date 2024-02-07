@@ -1,9 +1,11 @@
 ﻿using ECommerce.Services.Catalog.DTOs.CategoryDTOs;
 using ECommerce.Services.Catalog.Services.CategoryServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerce.Services.Catalog.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
